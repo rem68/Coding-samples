@@ -1,0 +1,270 @@
+<!doctype html> 
+<!-- customform.html			Emmett Montgomery -->
+<!-- This is a customizing webpage for a company that sells calendars. -->
+<!-- ====================================================== -->
+
+<html>
+ <head>
+  <title>  Calendar Fun </title>
+<script type="text/javascript" src="http://balance3e.com/random.js">
+</script>
+<script type="text/javascript">
+  function AdCalendar()
+  // Assumes: calendar images are in the folder
+  // Results: gives a random banner of calendars
+{
+	var clr, anml;
+
+	clr = RandomOneOf(['red', 'blue', 'brown', 'black']);
+	anml = RandomOneOf(['piglets', 'puppies', 'kittens', 'bears']);
+
+	document.getElementById('bannerImg').src= RandomOneOf(['purplebamerican' + clr + anml + '.jpg']);
+}
+</script>
+<script type="text/javascript">
+  function BackgroundPick()
+  // Assumes: user picks a color
+  // Results: shows the pick
+{
+	var1 = document.getElementById('backgroundBox').value;
+	document.getElementById('backgroundType').src = 'backgroundcolor' + var1 + '.jpg';
+}
+</script>
+<script type="text/javascript">
+  function FontPick()
+  // Assumes: user picks a font
+  // Results: shows the pick
+{
+	var2 = document.getElementById('fontBox').value;
+	document.getElementById('fontType').src = 'fonttype' + var2 + '.jpg';
+}
+</script>
+<script type="text/javascript">
+  function ColorPick()
+  // Assumes: user picks a color
+  // Results: shows the pick
+{
+	var3 = document.getElementById('colorBox').value;
+	document.getElementById('colorType').src = 'fonttype' + var2 + 'color' + var3 + '.jpg';
+}
+</script>
+<script type="text/javascript">
+  function AnimalPick()
+  // Assumes: user picks an animal
+  // Results: shows the pick
+{
+	var4 = document.getElementById('animalBox').value;
+	document.getElementById('animalType').src = 'animal' + var4 + '.jpg';
+}
+</script>
+<script type="text/javascript">
+  function SubmitOrder()
+  // Assumes: user has made all the picks
+  // Results: shows the total information
+{
+	var1 = document.getElementById('backgroundBox').value;
+	var2 = document.getElementById('fontBox').value;
+
+	if (var1 == 1) {
+		result1 = 'Purple, $5.00             '
+	}
+	if (var1 == 2) {
+		result1 = 'Blue, $5.25                '
+	}
+	if (var1 == 3) {
+		result1 = 'Green, $5.50               '
+	}
+	if (var1 == 4) {
+		result1 = 'Yellow, $5.75               '
+	}
+	if (var2 == 1) {
+		result2 = 'American Typewriter, $1.00 '
+	}
+	if (var2 == 2) {
+		result2 = 'Comic Sans MS, $1.25       '
+	}
+	if (var2 == 3) {
+		result2 = 'Curlz MT, $1.50             '
+	}
+	if (var2 == 4) {
+		result2 = 'Eurostile, $1.75           '
+	}
+	if (var3 == 1) {
+		result3 = 'Black, $2.00              '
+	}
+	if (var3 == 2) {
+		result3 = 'Brown, $2.25              '
+	}
+	if (var3 == 3) {
+		result3 = 'Red, $2.50                  '
+	}
+	if (var3 == 4) {
+		result3 = 'Blue, $2.75                  '
+	}
+	if (var4 == 1) {
+		result4 = 'Kittens, $3.00             '
+	}
+	if (var4 == 2) {
+		result4 = 'Puppies, $3.25               '
+	}
+	if (var4 == 3) {
+		result4 = 'Bears, $3.50                  '
+	}
+	if (var4 == 4) {
+		result4 = 'Piglets, $3.75               '
+	}
+	
+	document.getElementById('totalArea').value = result1 + result2 + result3 + result4;
+
+	if (var1 == 1) {
+		payment1 = parseFloat(5.00)
+	}
+	if (var1 == 2) {
+		payment1 = parseFloat(5.25)
+	}
+	if (var1 == 3) {
+		payment1 = parseFloat(5.50)
+	}
+	if (var1 == 4) {
+		payment1 = parseFloat(5.75)
+	}
+	if (var2 == 1) {
+		payment2 = parseFloat(1.00)
+	}
+	if (var2 == 2) {
+		payment2 = parseFloat(1.25)
+	}
+	if (var2 == 3) {
+		payment2 = parseFloat(1.50)
+	}
+	if (var2 == 4) {
+		payment2 = parseFloat(1.75)
+	}
+	if (var3 == 1) {
+		payment3 = parseFloat(2.00)
+	}
+	if (var3 == 2) {
+		payment3 = parseFloat(2.25)
+	}
+	if (var3 == 3) {
+		payment3 = parseFloat(2.50)
+	}
+	if (var3 == 4) {
+		payment3 = parseFloat(2.75)
+	}
+	if (var4 == 1) {
+		payment4 = parseFloat(3.00)
+	}
+	if (var4 == 2) {
+		payment4 = parseFloat(3.25)
+	}
+	if (var4 == 3) {
+		payment4 = parseFloat(3.50)
+	}
+	if (var4 == 4) {
+		payment4 = parseFloat(3.75)
+	}
+
+	subtotalMoney = payment1 + payment2 + payment3 + payment4
+	document.getElementById('subtotalBox').value = subtotalMoney;
+	taxPercent = RandomNum(2, 10); 
+	taxes = Math.ceil(subtotalMoney * (taxPercent/100) * 100)/100
+	document.getElementById('taxBox').value = taxes
+	document.getElementById('grandTotalBox').value = subtotalMoney + taxes;
+}
+</script>
+ </head>
+
+<body onload="setInterval('AdCalendar()', 1000); setInterval('BackgroundPick()', 100); setInterval('FontPick()', 100); setInterval('ColorPick()', 100); setInterval('AnimalPick()', 100);">
+<div style="text-align:center">
+<span style="color:purple">
+<h2> Customize Your Calendar! </h2>
+<p>
+All calendars are 18 x 18 inches.
+<br>
+Here are some examples of finished products with purple background and American Typewriter font:
+<br>
+<img id="bannerImg" alt="Calendar Example" src="purplebamericanredbears.jpg">
+</p>
+<h3> Option 1: Background Color </h3>
+<p>
+1 - Purple, $5.00
+<br>
+2 - Blue, $5.25
+<br>
+3 - Green, $5.50
+<br>
+4- Yellow, $5.75
+</p>
+<p>
+<img id="backgroundType">
+</p>
+<p>
+<input type="text" id="backgroundBox" size=4 value="">
+</p>
+<h3> Option 2: Font </h3>
+<p>
+1 - American Typewriter, $1.00
+<br>
+2 - Comic Sans MS, $1.25
+<br>
+3 - Curlz MT, $1.50
+<br>
+4- Eurostile, $1.75
+</p>
+<p>
+<img id="fontType">
+</p>
+<p>
+<input type="text" id="fontBox" size=4 value="">
+</p>
+<h3> Option 3: Font Color </h3>
+<p>
+1 - Black, $2.00
+<br>
+2 - Brown, $2.25
+<br>
+3 - Red, $2.50
+<br>
+4- Blue, $2.75
+</p>
+<p>
+<img id="colorType">
+</p>
+<p>
+<input type="text" id="colorBox" size=4 value="">
+</p>
+<h3> Option 4: Animal Theme </h3>
+<p>
+1 - Kittens, $3.00
+<br>
+2 - Puppies, $3.25
+<br>
+3 - Bears, $3.50
+<br>
+4- Piglets, $3.75
+</p>
+<p>
+<img id="animalType">
+</p>
+<p>
+<input type="text" id="animalBox" size=4 value="">
+</p>
+<input type="button" value="Submit Order" onclick="SubmitOrder()">
+<p>
+<textarea id="totalArea" rows=6 cols=30>
+</textarea>
+</p>
+<p>
+Subtotal $<input type="text" id="subtotalBox" size=5 value="">
+</p>
+<p>
+Tax $<input type="text" id="taxBox" size=4 value="">
+</p>
+<p>
+Grand Total $<input type="text" id="grandTotalBox" size=4 value="">
+</p>
+</span>
+</div>
+</body>
+</html>

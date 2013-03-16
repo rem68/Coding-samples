@@ -1,0 +1,87 @@
+<!doctype html> 
+<!-- index.html			Emmett Montgomery -->
+<!-- This is a webpage for a company that sells calendars. -->
+<!-- ====================================================== -->
+
+<html>
+ <head>
+  <title>  Calendar Fun </title>
+ </head>
+
+ <body>
+ <script type="text/javascript">
+ food = prompt("How do you like your calendars?", "");
+ </script>
+   <table align="center" div style="text-align:center">
+  <tr>
+  <td> <img src="another.jpg" height=200 width=200 onmouseover="this.src='anotherr.jpg';" onmouseout="this.src='another.jpg';"> </td>
+  <td> <h1> <span style="color:purple"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calendar Fun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </span>
+   </h1>
+  <div style="text-align:center">
+  <span style="color:purple">
+  <p>
+   Located at: <br>
+  370 Fulton St <br>
+  Memphis, TN 38103
+  </p> </span> </div>
+  </td>
+  <td> <img src="yetanother.jpg" height=200 width=200 onmouseover="this.src='yetanotherr.jpg';" onmouseout="this.src='yetanother.jpg';"> </td>
+  </tr>
+ </table>
+  <hr>
+ <div style="text-align:center">
+ Calendar Fun is a calendar making company that was started by Mr. and Mrs. Fun in 2009. <br>
+The Fun family decided that calendars of the day were too bland and there was not enough <br>
+fun in them. &nbsp;Life needed spicing up and this could be done, starting with the day to day use <br>
+of a calendar. &nbsp;Mrs. Fun who loved photography had the idea of using cute cuddly animals as <br>
+their focus to make life more fun. &nbsp;Mr. Fun took out his old printing press from his basement <br>
+and they began making cute calendars. &nbsp;Today Calendar Fun is a multi-billion dollar business, <br>
+located in the Memphis Pyramid.
+ <p>
+ <img src="pyramid.png">
+ </p>
+ <hr>
+  <h3 span style="color:purple"> Some examples of our products! </h3>
+<p>
+<table align="center">
+<tr>
+<td> <img src="201000003838.jpg" height=200 width=200 onmouseover="this.src='201000002898.png';" onmouseout="this.src='201000003838.jpg';"> </td>
+<td> <img src="2011calendar.jpg" height=125 width=200 onmouseover="this.src='animalfriends.jpg';" onmouseout="this.src='2011calendar.jpg';"> </td>
+<td> <img src="januarycalendar.jpg" height=267 width=200 onmouseover="this.src='longandskinny.jpg';" onmouseout="this.src='januarycalendar.jpg';"> </td>
+<td> <img src="animalbabies2.jpg" height=200 width=200 onmouseover="this.src='201100003120.jpg';" onmouseout="this.src='animalbabies2.jpg';"> </td>
+</tr>
+</table>
+<hr>
+  <h3 span style="color:purple"> Wondering If We Have Just the Right Product for You? </h3>
+<p>
+Enter your favorite animal here to see how many <br> calendars we have that include your favorite animal!  <input type="text" id="animalBox" size=20 value="dogs">
+</p>
+<p>
+ <input type="button" value="Click Here to Search Database" onclick="favAnimal=document.getElementById('animalBox').value; document.getElementById('outputDiv').innerHTML=' You like ' + favAnimal + '? Well we have a surprise for you! We have over 100 different calendars with ' + favAnimal + ' on them that are also ' + food + '! </p>';">
+ <div id="outputDiv"> </div>
+ <hr>
+  <h3 span style="color:purple"> Purchase Our Products! </h3>
+ <p>
+ The following websites sell our products:
+ <br>
+   <a href="http://www.amazon.com/" target="_blank"> <i>http://www.amazon.com/</i></a>
+ <br>
+    <a href="http://www.barnesandnoble.com/" target="_blank"> <i>http://www.barnesandnoble.com/</i></a>
+ </p>
+<p> To create your own calendar:
+<br>
+<a href="customform.html">Create your Own!</a>
+</p>
+ <p>
+  To buy pre-made calendars directly from our site: 
+ <br>
+  <input type="button" value="Buy From Us!" onclick="alert('Sorry! This portion of our website is currently under maintenance.');">
+ </p>
+ <hr>
+<p>
+For a directory of Calendar Fun Employees click <a href="directory.html"> here</a>.
+<br>
+
+</body>
+</html>
